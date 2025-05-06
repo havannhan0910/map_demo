@@ -112,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
               options: const MapOptions(
                 initialCenter: LatLng(21.033333, 105.849998),
                 initialZoom: 14,
-                minZoom: 14,
+                minZoom: 3,
                 maxZoom: 14,
               ),
               children: [
@@ -128,9 +128,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       mbtiles: MbTiles(mbtilesPath: MbTilesProvider.dbPath),
                     ),
                   }),
-                  // do not set maximumZoom here to the metadata.maxZoom
-                  // or tiles won't get over-zoomed.
-                  maximumZoom: 14,
                 ),
               ],
             ),
